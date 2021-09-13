@@ -1,0 +1,16 @@
+<div class="container mt-5 mb-5 pt-5">
+    <h3>Products</h3>
+    <div class="row ">
+        <div class="col-md-4" *ngFor="let product of products; index as i">
+            <div class="card">
+                <img src="{{product.thumbnail}}" class="card-img-top img-thumbnail custom-img" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-danger">{{product.name}}</h5>
+                  <p class="card-text">{{product.description}}</p>
+                  <p class="text-success"><small><i class="fa fa-inr"></i> {{product.price}}</small></p>
+                  <button  class="btn btn-outline-warning btn-block" (click)="buyNow(i)"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark fixed-top bg-danger">
+    <a class="navbar-brand" routerLink='/'>Shop Top</a>
+    <div class="form-inline" *ngIf="!user">
+        <button class="btn btn-outline-light mr-sm-2" routerLink="/signup">Signup</button>
+        <button class="btn btn-dark my-2 my-sm-0" routerLink="/login">Login</button>
+    </div>
+    <div class="form-inline"  *ngIf="user">
+        <small class=" mr-sm-2" routerLink="/profile">Hello, {{user.displayName}}</small>
+        <button class="btn btn-outline-warning my-2 my-sm-0" (click)="logout()">logout</button>
+    </div>
+</nav>
